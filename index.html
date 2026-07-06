@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcade — Two Games Built with Claude Fable 5</title>
+<meta name="description" content="Two browser games built with Claude Fable 5: Turbo Rush (car racing) and Nova Surge (arena action). Play free, no installation.">
+<style>
+  :root{
+    --bg:#0a0b12;
+    --panel:#13152200;
+    --cyan:#00e5ff;
+    --hot:#ff2d78;
+    --gold:#ffc857;
+    --text:#e9edf6;
+    --dim:#8d96ad;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    min-height:100vh;
+    background:radial-gradient(ellipse at 50% -20%, #1a1d30 0%, var(--bg) 60%);
+    font-family:"Segoe UI", system-ui, sans-serif;
+    color:var(--text);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:48px 20px;
+  }
+  h1{
+    font-size:clamp(34px,6vw,58px);
+    font-weight:800;letter-spacing:6px;text-align:center;
+    background:linear-gradient(90deg,var(--cyan),var(--gold),var(--hot));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .tag{color:var(--dim);letter-spacing:3px;font-size:13px;margin:10px 0 44px;text-align:center;}
+  .games{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;max-width:900px;}
+  a.card{
+    display:block;width:380px;max-width:100%;
+    text-decoration:none;color:var(--text);
+    border:1px solid #262b45;border-radius:16px;
+    background:linear-gradient(160deg,#151827,#0e1019);
+    padding:28px 26px 26px;
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  a.card:hover{transform:translateY(-5px);}
+  a.card:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+  .card.race:hover{border-color:var(--cyan);box-shadow:0 12px 50px rgba(0,229,255,.18);}
+  .card.action:hover{border-color:var(--gold);box-shadow:0 12px 50px rgba(255,200,87,.18);}
+  .emoji{font-size:40px;margin-bottom:14px;}
+  h2{font-size:24px;letter-spacing:2px;margin-bottom:6px;}
+  .race h2{color:var(--cyan);}
+  .action h2{color:var(--gold);}
+  .genre{font-size:12px;letter-spacing:2px;color:var(--dim);margin-bottom:14px;text-transform:uppercase;}
+  p{font-size:14px;line-height:1.65;color:#b7bfd2;margin-bottom:18px;}
+  .play{
+    display:inline-block;font-weight:700;letter-spacing:2px;font-size:13px;
+    padding:9px 20px;border-radius:8px;
+  }
+  .race .play{color:#06131a;background:var(--cyan);}
+  .action .play{color:#1a1002;background:var(--gold);}
+  footer{margin-top:52px;color:var(--dim);font-size:13px;text-align:center;line-height:1.8;}
+  footer b{color:var(--text);font-weight:600;}
+</style>
+</head>
+<body>
+  <h1>MINI ARCADE</h1>
+  <div class="tag">TWO BROWSER GAMES · BUILT WITH CLAUDE FABLE 5 · NO INSTALL NEEDED</div>
+
+  <div class="games">
+    <a class="card race" href="turbo-rush-car-race.html">
+      <div class="emoji">🏎️</div>
+      <h2>TURBO RUSH</h2>
+      <div class="genre">Night highway racer</div>
+      <p>Four lanes, endless traffic, no brakes. Steer with the arrow keys, hold ↑ for turbo, grab stars, and survive as far as you can.</p>
+      <span class="play">PLAY NOW →</span>
+    </a>
+
+    <a class="card action" href="nova-surge-action-game.html">
+      <div class="emoji">🚀</div>
+      <h2>NOVA SURGE</h2>
+      <div class="genre">Arena survival shooter</div>
+      <p>Endless enemy waves, four hostile types, power cores and a dash with i-frames. Move with WASD, aim with the mouse, hold click to fire.</p>
+      <span class="play">DEPLOY →</span>
+    </a>
+  </div>
+
+  <footer>
+    Both games are single self-contained HTML5 files — no engine, no dependencies.<br>
+    Generated with <b>Claude Fable 5</b> by Anthropic as a weekend experiment. Best played on desktop.
+  </footer>
+</body>
+</html>
